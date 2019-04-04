@@ -10,7 +10,7 @@ My learning goals are as follows:
 
 1. **Work with unit and integration testing**
 
-    I recently attended a workshop at HackerYou on testing React applications with Jest. While some of the content was beyond what we had covered in the bootcamp, it shined a light on where I was weak, and concepts that I needed to explore.
+    I recently attended a workshop at HackerYou on testing React applications with Jest. While some of the content was beyond what we had covered in the bootcamp, it shined a light on where I was weak, and concepts that I needed to explore. Unit and integration testing will be a part of the experience, and some TDD as well.
 
 1. **Refactor the design and css**
 
