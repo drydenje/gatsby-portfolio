@@ -1,0 +1,62 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Footer Renders the footer correctly 1`] = `
+<footer>
+  <ul
+    className="navSocialLinks"
+  >
+    <li>
+      <a
+        alt="twitter"
+        aria-label="twitter"
+        href="https://twitter.com/itsmejeremyd"
+        rel="noopener noreferrer"
+        target="_blank"
+      >
+        <i
+          className="fab fa-twitter"
+        />
+      </a>
+    </li>
+    <li>
+      <a
+        alt="linkedIn"
+        aria-label="linkedIn"
+        href="https://www.linkedin.com/in/jeremy-dryden-2396879/"
+        rel="noopener noreferrer"
+        target="_blank"
+      >
+        <i
+          className="fab fa-linkedin-in"
+        />
+      </a>
+    </li>
+    <li>
+      <a
+        alt="github"
+        aria-label="github"
+        href="https://github.com/drydenje"
+        rel="noopener noreferrer"
+        target="_blank"
+      >
+        <i
+          className="fab fa-github"
+        />
+      </a>
+    </li>
+    <li>
+      <a
+        alt="medium"
+        aria-label="medium"
+        href="https://medium.com/@jeremy.dryden/"
+        rel="noopener noreferrer"
+        target="_blank"
+      >
+        <i
+          className="fab fa-medium-m"
+        />
+      </a>
+    </li>
+  </ul>
+</footer>
+`;
