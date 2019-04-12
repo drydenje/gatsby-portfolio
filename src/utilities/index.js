@@ -2,3 +2,4 @@
 
 export * from './Breakpoints';
 export * from './Positions';
+export * from './Colours';

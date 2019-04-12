@@ -1,7 +1,7 @@
 // Mixins to help position objects
 import { css } from 'styled-components';
 
-// CSS Helper
+// CSS Helper =>
 // Needed for props in mixins
 export const fixedTop = css`
   position: fixed;
