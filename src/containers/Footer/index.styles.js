@@ -1,12 +1,5 @@
 import styled from 'styled-components';
-
-// const black = "#000000"
-const white = '#ffffff';
-const swamp = '#00191c';
-const fuelYellow = '#e8a400';
-// const nugget = "#CE9228"
-// const keppel = "#49A89E"
-// const keraGrey = "#f7f5f5"
+import { white, swamp, fuelYellow } from '../../utilities';
 
 export const FooterStyles = styled.footer`
   color: ${white};

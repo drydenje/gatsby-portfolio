@@ -1,10 +1,12 @@
-import React from "react"
+import React from 'react';
+import { AboutStyles } from './index.styles.js';
+import ProfileImage from '../../images/Square.jpg';
 
 const About = () => {
   return (
-    <section className="about" id="about">
+    <AboutStyles className="about" id="about">
       <figure>
-        <img src="./assets/Square.jpg" alt="Jeremy Dryden" />
+        <img src={ProfileImage} alt="Jeremy Dryden" />
       </figure>
 
       {/* Start of .wrapper */}
@@ -30,8 +32,8 @@ const About = () => {
         </ul>
       </div>
       {/* End of .wrapper */}
-    </section>
-  )
-}
+    </AboutStyles>
+  );
+};
 
-export default About
+export default About;

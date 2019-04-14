@@ -1,10 +1,12 @@
-import React from "react"
+import React from 'react';
+import Callout from '../../components/callout';
+import { ContactStyles } from './index.styles';
 
 const Contact = () => {
   return (
-    <section className="contact" id="contact">
+    <ContactStyles className="contact" id="contact">
       <div className="calloutWrapper">
-        <div className="callout">Contact</div>
+        <Callout className="callout" text="Contact" />
       </div>
       <div className="wrapper">
         <h2>Want to talk?</h2>
@@ -44,8 +46,8 @@ const Contact = () => {
           <button type="submit">Send</button>
         </form>
       </div>
-    </section>
-  )
-}
+    </ContactStyles>
+  );
+};
 
-export default Contact
+export default Contact;

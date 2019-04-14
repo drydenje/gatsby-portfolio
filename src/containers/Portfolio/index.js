@@ -1,12 +1,13 @@
-import React from "react"
-
+import React from 'react';
+import Callout from '../../components/callout';
+import { Hr } from '../../elements';
 // Todo: Font awesome icons, are they needed anymore after the redesign?
 
 const Portfolio = () => {
   return (
     <section className="portfolio" id="portfolio">
       <div className="calloutWrapper">
-        <div className="callout">Portfolio</div>
+        <Callout className="callout" text="Portfolio" />
       </div>
 
       <div className="wrapper">
@@ -61,7 +62,7 @@ const Portfolio = () => {
           </div>
         </div>
 
-        <hr className="diamond" />
+        <Hr />
 
         {/* Recipe Collections Project */}
         <div className="project" id="project2">
@@ -115,7 +116,7 @@ const Portfolio = () => {
             </div>
           </div>
         </div>
-        <hr className="diamond" />
+        <Hr />
 
         {/* Beachstays Project */}
         <div className="project">
@@ -170,7 +171,7 @@ const Portfolio = () => {
         </div>
       </div>
     </section>
-  )
-}
+  );
+};
 
-export default Portfolio
+export default Portfolio;
