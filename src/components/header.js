@@ -1,14 +1,16 @@
-import { Link } from "gatsby"
-import PropTypes from "prop-types"
-import React from "react"
-import styled from "styled-components"
-
+import { Link } from 'gatsby';
+import PropTypes from 'prop-types';
+import React from 'react';
+import styled from 'styled-components';
+import { fixed, elevation } from '../utilities';
 const StyledHeader = styled.header`
   /* Any valid css represented as a string */
 
   /* Prop example */
-  background: ${({ type }) => (type === "becca" ? "rebeccapurple" : "orange")};
-
+  background: ${({ type }) => (type === 'becca' ? 'rebeccapurple' : 'orange')};
+  width: 100%;
+  ${fixed()};
+  ${elevation[2]};
   div {
     h1 {
       a {
@@ -19,7 +21,7 @@ const StyledHeader = styled.header`
       }
     }
   }
-`
+`;
 
 const Header = ({ siteTitle }) => (
   <StyledHeader type="becca">
@@ -43,14 +45,14 @@ const Header = ({ siteTitle }) => (
       </h1>
     </div>
   </StyledHeader>
-)
+);
 
 Header.propTypes = {
   siteTitle: PropTypes.string,
-}
+};
 
 Header.defaultProps = {
   siteTitle: ``,
-}
+};
 
-export default Header
+export default Header;

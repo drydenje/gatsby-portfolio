@@ -11,7 +11,7 @@ import { StaticQuery, graphql } from 'gatsby';
 
 import Header from './header';
 // import "./layout.css"
-import GlobalStyle from './setup.styles';
+import SetupStyles from './setup.styles';
 
 const Layout = ({ children }) => (
   <StaticQuery
@@ -26,7 +26,7 @@ const Layout = ({ children }) => (
     `}
     render={data => (
       <>
-        <GlobalStyle />
+        <SetupStyles />
         <Header siteTitle={data.site.siteMetadata.title} />
         <div
           style={{

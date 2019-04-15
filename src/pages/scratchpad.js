@@ -1,10 +1,12 @@
 import React from 'react';
 import { Link } from 'gatsby';
 import styled from 'styled-components';
+import SetupStyles from '../components/setup.styles';
 
 import Layout from '../components/layout';
 import SEO from '../components/seo';
 import { Heading, Button, CancelButton } from '../elements';
+import { elevation } from '../utilities';
 
 const Fake = ({ className }) => (
   <div className={className}>
@@ -15,6 +17,8 @@ const Fake = ({ className }) => (
 const DoubleFake = styled(Fake)`
   h2 {
     color: red;
+    background: rebeccapurple;
+    ${elevation[2]}
   }
 `;
 
@@ -28,18 +32,21 @@ const DoubleFake = styled(Fake)`
 const IndexPage = () => (
   <Layout>
     <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />
+    <SetupStyles />
     <Heading>Hi people</Heading>
 
     <>
       <p>Welcome to your new Gatsby site.</p>
       <p>Now go build something great.</p>
-      <Button>Inner Button</Button>
+      {/* <Button>Inner Button</Button> */}
     </>
 
     <DoubleFake />
 
-    <Button>Regular</Button>
-    <CancelButton top="250">Cancel</CancelButton>
+    <Button>Submit</Button>
+    <CancelButton>Cancel</CancelButton>
+    <Button size="small">Submit</Button>
+    <CancelButton size="small">Cancel</CancelButton>
     <Link to="/">Run home, Jack</Link>
   </Layout>
 );
