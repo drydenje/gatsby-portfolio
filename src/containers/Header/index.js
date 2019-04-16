@@ -8,7 +8,7 @@ const Header = () => {
     <HeaderStyles id="home">
       {/* Navigation Menu */}
       <label htmlFor="navMenu" className="menuBars">
-        <FontAwesomeIcon icon={['fas', 'bars']} size="lg" />
+        <FontAwesomeIcon icon={['fas', 'bars']} />
       </label>
       <input type="checkbox" id="navMenu" />
       <Navigation />

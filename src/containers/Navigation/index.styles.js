@@ -18,6 +18,7 @@ export const NavStyles = styled.nav`
   max-width: 400px;
   padding: 1rem;
 
+  font-size: 1rem;
   background-color: ${swamp};
 
   h3 {

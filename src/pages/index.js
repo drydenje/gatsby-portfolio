@@ -11,7 +11,7 @@ import BaseStyles from '../components/base.styles';
 import Header from '../containers/Header';
 import About from '../containers/About';
 import Portfolio from '../containers/Portfolio';
-import Contact from '../containers/Contact';
+// import Contact from '../containers/Contact';
 import Footer from '../containers/Footer/';
 
 // Add FontAwesome icons to the library, so they can be referenced throughout the app
@@ -25,7 +25,7 @@ const IndexPage = () => (
     <main id="maincontent">
       <About />
       <Portfolio />
-      <Contact />
+      {/* <Contact /> */}
     </main>
     <Footer />
   </>

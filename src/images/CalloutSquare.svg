@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" xml:lang="en" width="252px" height="252px">
+  <title>Section Callout</title>
+  <defs>
+    <linearGradient id="borderStyle" 
+      gradientTransform="rotate(45)">
+      <stop stop-color="hsl(0,0%,0%)" offset="0"/>
+      <stop stop-color="hsl(0,0%,0%)" offset="0.85"/>
+      <stop stop-color="hsl(0,0%,100%)" offset="0.85"/>
+    </linearGradient>
+  </defs>
+  <rect x="18" y="18" width="220" height="220" fill="none" stroke="url(#borderStyle)" stroke-width="18" />
+</svg>
