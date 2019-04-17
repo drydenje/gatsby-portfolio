@@ -1,67 +1,37 @@
 import React from 'react';
 import styled from 'styled-components';
-import { white, fuelYellow, fontSerif, fontWeightRegular } from '../utilities';
-const border = '18px';
+import { Grey } from '../utilities';
+import CalloutSquare from '../images/CalloutSquare.svg';
 
-const Callout = ({ className, text }) => {
-  return <div className={className}>{text}</div>;
+// const border = '18px';
+
+const Callout = ({ headingText }) => {
+  return (
+    <StyledSquare>
+      <StyledHeading>{headingText}</StyledHeading>
+    </StyledSquare>
+  );
 };
 
-export default styled(Callout)`
+export default styled(Callout)``;
+
+const StyledSquare = styled.div`
+  grid-area: sectionTitle;
+
   display: flex;
-  flex-direction: row;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
-  width: 95%;
-  margin: 1rem auto;
 
-  max-width: 100%;
+  background-image: url(${CalloutSquare});
+  background-position: center left;
+  background-repeat: no-repeat;
+  background-size: contain;
+`;
 
-  position: relative;
-  padding: 30% 0;
-  box-sizing: border-box;
-
-  color: ${white};
-  font-family: ${fontSerif};
-  font-weight: ${fontWeightRegular};
-  font-size: 19vw;
-  background: ${fuelYellow};
-  background-clip: padding-box;
-  border: solid ${border} transparent;
-  border-radius: 0;
-
-  &:before {
-    content: '';
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    z-index: -1;
-    margin: -${border};
-    border-radius: inherit;
-    background: -moz-linear-gradient(
-      -45deg,
-      rgba(0, 0, 0, 0.5) 0%,
-      rgba(0, 0, 0, 0.5) 63%,
-      rgba(255, 255, 255, 0) 63%,
-      rgba(255, 255, 255, 0) 100%
-    ); /* FF3.6-15 */
-
-    background: -webkit-linear-gradient(
-      -45deg,
-      rgba(0, 0, 0, 0.5) 0%,
-      rgba(0, 0, 0, 0.5) 63%,
-      rgba(255, 255, 255, 0) 63%,
-      rgba(255, 255, 255, 0) 100%
-    ); /* Chrome10-25,Safari5.1-6 */
-
-    background: linear-gradient(
-      135deg,
-      rgba(0, 0, 0, 0.2) 0%,
-      rgba(0, 0, 0, 0.2) 63%,
-      rgba(255, 255, 255, 0) 63%,
-      rgba(255, 255, 255, 0) 100%
-    );
-  }
+const StyledHeading = styled.h1`
+  color: ${Grey['000']};
+  font-size: 11.5vw;
+  margin-left: 5.5vw;
+  font-family: 'Merriweather', serif;
+  font-weight: normal;
 `;
