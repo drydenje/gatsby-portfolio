@@ -3,7 +3,12 @@ module.exports = {
     title: `its me jeremy d`,
     description: `The portfolio site of a Toronto-based front end web developer`,
     author: `@itsmejeremyd`,
-    technicalWins: ['gatsby', 'unit testing', 'integration testing', 'test driven development' ],
+    technicalWins: [
+      'gatsby',
+      'unit testing',
+      'integration testing',
+      'test driven development',
+    ],
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -31,5 +36,14 @@ module.exports = {
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        path: `${__dirname}/src/posts`,
+        name: 'posts',
+      },
+    },
+    'gatsby-transformer-remark',
+    'gatsby-plugin-transition-link',
   ],
-}
+};

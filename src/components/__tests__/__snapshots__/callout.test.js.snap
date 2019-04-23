@@ -1,0 +1,30 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Component - Callout renders a picture to the Callout component 1`] = `
+<div
+  className="sc-bdVaJa bBuFaz"
+>
+  <img
+    className="sc-htpNat qHGID"
+    src="test-file-stub"
+  />
+</div>
+`;
+
+exports[`Component - Callout renders a section title to the Callout component 1`] = `
+<div
+  className="sc-bdVaJa bBuFaz"
+>
+  <h1
+    className="sc-bwzfXH fSkwLX"
+  >
+    Portfolio
+  </h1>
+</div>
+`;
+
+exports[`Component - Callout renders correctly 1`] = `
+<div
+  className="sc-bdVaJa bBuFaz"
+/>
+`;

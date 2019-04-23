@@ -1,11 +1,8 @@
 import { createGlobalStyle } from 'styled-components';
+import { Grey } from '../utilities/';
 
 const BaseStyles = createGlobalStyle`
-${
-  {
-    /* set a base font */
-  }
-}
+/* @import url(''); */
 html {
   font-size: 125%;
 }
@@ -16,9 +13,8 @@ body {
   font-size: 1rem;
   line-height: 1.6rem;
   letter-spacing: 0.1rem;
-  color: $black;
+  color: ${Grey['900']};
   background: $white;
-  // background: $fuelYellow;
   scroll-behavior: smooth;
 }
 

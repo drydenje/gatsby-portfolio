@@ -16,22 +16,30 @@
     "gatsby-plugin-react-helmet": "^3.0.11",
     "gatsby-plugin-sharp": "^2.0.32",
     "gatsby-plugin-styled-components": "^3.0.7",
+    "gatsby-plugin-transition-link": "^1.12.2",
     "gatsby-source-filesystem": "^2.0.29",
     "gatsby-transformer-remark": "^2.3.8",
     "gatsby-transformer-sharp": "^2.1.17",
+    "gsap": "^2.1.2",
     "polished": "^3.2.0",
     "prop-types": "^15.7.2",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-helmet": "^5.2.0",
     "react-spring": "^8.0.19",
+    "react-testing-library": "^6.1.2",
     "styled-components": "^4.2.0",
     "styled-components-modifiers": "^1.1.0"
   },
   "devDependencies": {
+    "babel-jest": "^24.7.1",
     "babel-plugin-macros": "^2.5.1",
     "babel-plugin-styled-components": "^1.10.0",
-    "prettier": "^1.16.4"
+    "babel-preset-gatsby": "^0.1.11",
+    "identity-obj-proxy": "^3.0.0",
+    "jest": "^24.7.1",
+    "prettier": "^1.16.4",
+    "react-test-renderer": "^16.8.6"
   },
   "keywords": [
     "gatsby"
@@ -43,7 +51,7 @@
     "format": "prettier --write src/**/*.{js,jsx}",
     "start": "npm run develop",
     "serve": "gatsby serve",
-    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\""
+    "test": "jest"
   },
   "repository": {
     "type": "git",
