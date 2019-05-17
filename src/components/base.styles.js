@@ -1,5 +1,12 @@
 import { createGlobalStyle } from 'styled-components';
 import { Grey } from '../utilities/';
+import {
+  fontSerif,
+  fontSansSerif,
+  fontWeightLight,
+  fontWeightRegular,
+  fontWeightBold,
+} from '../utilities';
 
 const BaseStyles = createGlobalStyle`
 /* @import url(''); */
@@ -8,8 +15,8 @@ html {
 }
 
 body {
-  font-family: $fontSansSerif;
-  font-weight: $fontWeightLight;
+  font-family: ${fontSansSerif};
+  font-weight: ${fontWeightLight};
   font-size: 1rem;
   line-height: 1.6rem;
   letter-spacing: 0.1rem;
@@ -19,25 +26,25 @@ body {
 }
 
 h1 {
-  font-family: $fontSerif;
-  font-weight: $fontWeightBold;
+  font-family: ${fontSerif};
+  font-weight: ${fontWeightBold};
   font-size: 1.8rem;
 }
 
 h2 {
-  font-family: $fontSerif;
-  font-weight: $fontWeightBold;
+  font-family: ${fontSerif};
+  font-weight: ${fontWeightBold};
 }
 
 h3 {
-  font-family: $fontSerif;
-  font-weight: $fontWeightLight;
+  font-family: ${fontSerif};
+  font-weight: ${fontWeightLight};
   margin: 0.2rem auto;
 }
 
 h4 {
-  font-family: $fontSerif;
-  font-weight: $fontWeightRegular;
+  font-family: ${fontSerif};
+  font-weight: ${fontWeightRegular};
   margin: 0;
 }
 
@@ -84,85 +91,21 @@ label.visuallyHidden:not(:focus):not(:active) {
   overflow: hidden;
 }
 
-
-
-/* // This technique was use from: https://codepen.io/shshaw/pen/MqMZGR?editors=0100#0
-// The idea is that you create a :before element with a bordera bright colour, and z-position it behind the main element
-// The main element then has a transparent border, allowing the gradient to show through */
-.callout {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  //width: 50vw;
-  width: 95%;
-  margin: 1rem auto;
-
-  max-width: 100%;
-
-  position: relative;
-  padding: 30% 0;
-  // padding: 10% 2em;
-  box-sizing: border-box;
-  // opacity: 0.8;
-
-  $border: 18px;
-  color: $white;
-  font-family: $fontSerif;
-  font-weight: $fontWeightRegular;
-  font-size: 19vw;
-  background: $fuelYellow;
-  background-clip: padding-box;
-  border: solid $border transparent;
-  border-radius: 0;
-
-  &:before {
-    content: '';
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    z-index: -1;
-    // opacity: 0.8;
-    margin: -$border;
-    border-radius: inherit;
-    background: -moz-linear-gradient(
-      -45deg,
-      rgba(0, 0, 0, 0.5) 0%,
-      rgba(0, 0, 0, 0.5) 63%,
-      rgba(255, 255, 255, 0) 63%,
-      rgba(255, 255, 255, 0) 100%
-    ); /* FF3.6-15 */
-
-    background: -webkit-linear-gradient(
-      -45deg,
-      rgba(0, 0, 0, 0.5) 0%,
-      rgba(0, 0, 0, 0.5) 63%,
-      rgba(255, 255, 255, 0) 63%,
-      rgba(255, 255, 255, 0) 100%
-    ); /* Chrome10-25,Safari5.1-6 */
-
-    background: linear-gradient(
-      135deg,
-      rgba(0, 0, 0, 0.2) 0%,
-      rgba(0, 0, 0, 0.2) 63%,
-      rgba(255, 255, 255, 0) 63%,
-      rgba(255, 255, 255, 0) 100%
-    );
-  }
+.navButton { 
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 20;
+  margin: 10px;
 }
 
-.calloutWrapper {
-  width: 100%;
-  background-color: $fuelYellow;
-  // background-image: url('../assets/backgroundLeft.png');
-  padding: 1rem;
-  position: relative;
-  z-index: -1;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.navWrapper {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: 10;
 }
 
 @media (min-width: 480px) {

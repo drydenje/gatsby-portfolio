@@ -1,24 +1,36 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styled from 'styled-components';
 import { Grey, absolute, elevation } from '../utilities';
 import CalloutSquare from '../images/CalloutSquare.svg';
-// import { Spring } from 'react-spring/renderprops';
+
+import { useSpring, animated } from 'react-spring';
 
 const Callout = ({ headingText, headshot }) => {
+  const [isToggled, setToggle] = useState(true);
+  const { color, y } = useSpring({
+    // opacity: isToggled ? 1 : 0,
+    // color: isToggled ? 'tomato' : 'green',
+    y: isToggled ? 0 : -50,
+  });
   return (
-    <StyledSquare>
-      {/* <Spring from={{ opactiy: 0 }} to={{ opacity: 1 }}> */}
-      {/* {styles => ( */}
-      {/* <> */}
-      {/* {console.log(styles)} */}
-      {/* <div style={{ overflow: 'hidden' }}> */}
-      {/* <div style={{ overflow: 'hidden', ...styles }}> */}
-      {headingText && <StyledHeading>{headingText}</StyledHeading>}
+    <StyledSquare
+      onClick={() => {
+        setToggle(!isToggled);
+        console.log('loaded');
+      }}
+    >
+      {headingText && (
+        <SlideUp
+          style={{
+            transform: y.interpolate(y => `translate3d(0,${y}px,0)`),
+            color,
+          }}
+        >
+          {headingText}
+        </SlideUp>
+      )}
       {headshot && <StyledHeadshot src={headshot} />}
-      {/* </div> */}
-      {/* </> */}
-      {/* )} */}
-      {/* </Spring> */}
+      {/* <button onClick={() => setToggle(!isToggled)}>Toggle</button> */}
     </StyledSquare>
   );
 };
@@ -48,6 +60,8 @@ const StyledHeading = styled.h1`
   font-family: 'Merriweather', serif;
   font-weight: normal;
 `;
+
+const SlideUp = animated(StyledHeading);
 
 const StyledHeadshot = styled.img`
   ${absolute({ xProp: 'right', yProp: '' })};

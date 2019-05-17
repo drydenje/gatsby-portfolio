@@ -7,16 +7,15 @@ export const NavStyles = styled.nav`
   justify-content: flex-start;
   align-items: flex-end;
 
-  left: -320px;
-  transition: all 200ms ease-in-out;
   position: fixed;
   top: 0;
-  z-index: 100;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: 10;
 
-  height: 100vh;
-  width: 320px;
-  max-width: 400px;
-  padding: 1rem;
+  /* width: 320px; */
+  padding: 2rem;
 
   font-size: 1rem;
   background-color: ${swamp};
@@ -38,8 +37,7 @@ export const NavStyles = styled.nav`
     }
   }
 
-  .navLogo {
-    // text-transform: uppercase;
+  /* .navLogo {
     color: ${keppel};
 
     span:nth-child(1) {
@@ -48,14 +46,11 @@ export const NavStyles = styled.nav`
     span:nth-child(2) {
       color: ${white};
     }
-  }
+  } */
 
   .navLinks {
     text-align: right;
     li {
-      ${{
-        /* display: inline-block; */
-      }}
     }
 
     li a {
@@ -69,11 +64,9 @@ export const NavStyles = styled.nav`
     }
   }
 
-  .navSocialLinks {
-    // text-align: center;
-
+  /* .navSocialLinks {
     li {
       display: inline-block;
     }
-  }
+  } */
 `;

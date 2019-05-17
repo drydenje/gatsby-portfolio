@@ -3,10 +3,9 @@ import styled from 'styled-components';
 // import TransitionLink from 'gatsby-plugin-transition-link';
 // import Link from 'gatsby-plugin-transition-link';
 
+import Layout from '../components/layout';
 import Panel from '../containers/Panel';
 import { Hr } from '../elements/Hr';
-import SetupStyles from '../components/setup.styles';
-import BaseStyles from '../components/base.styles';
 
 // utilities
 import {
@@ -22,7 +21,6 @@ import {
 import BackgroundLeft from '../images/backgroundLeft.png';
 import BackgroundRight from '../images/backgroundRight.png';
 import Briefcase from '../images/noun_portfolio_bag_2393950.svg';
-// import Headshot from '../images/Square.jpg';
 
 // title: {
 //   quote: 'A web developer',
@@ -38,8 +36,7 @@ const Content = ({ className }) => {
       </h3>
       <p>
         I'm a Toronto, Ontario based front-end web developer looking for a good
-        fit with a great company. Feel free to reach out using the form below,
-        I'd love to talk!
+        fit with a great company. Feel free to reach out, I'd love to talk!
       </p>
 
       {/* <p>I'm a recent HackerYou bootcamp graduate,</p> */}
@@ -130,14 +127,12 @@ const RIGHT_CONTENT = {
 
 const AboutPage = () => {
   return (
-    <>
-      <SetupStyles />
-      <BaseStyles />
+    <Layout>
       <div style={{ display: 'flex' }}>
         <Panel ComponentContent={LEFT_CONTENT} />
         <Panel ComponentContent={RIGHT_CONTENT} />
       </div>
-    </>
+    </Layout>
   );
 };
 

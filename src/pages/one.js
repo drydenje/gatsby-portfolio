@@ -2,13 +2,13 @@ import React from 'react';
 import { MySpring, SpringLink } from '../components/springTitle';
 import Callout from '../components/callout';
 
-const B = () => (
+const A = () => (
   <>
     <h1>React spring</h1>
-    <MySpring text="hello from page B" />
-    <SpringLink to="/one">to page a!</SpringLink>
+    <MySpring text="hello from page A" />
+    <SpringLink to="/two">to page b!</SpringLink>
     <Callout headingText="Portfolio" />
   </>
 );
 
-export default B;
+export default A;

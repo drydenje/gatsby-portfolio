@@ -5,8 +5,7 @@ import styled from 'styled-components';
 
 import Panel from '../containers/Panel';
 import { Hr } from '../elements/Hr';
-import SetupStyles from '../components/setup.styles';
-import BaseStyles from '../components/base.styles';
+import Layout from '../components/layout';
 
 // utilities
 import {
@@ -130,15 +129,12 @@ const RIGHT_CONTENT = {
 
 const AboutPage = () => {
   return (
-    <>
-      <SetupStyles />
-      <BaseStyles />
-
+    <Layout>
       <div style={{ display: 'flex' }}>
         <Panel ComponentContent={LEFT_CONTENT} />
         <Panel ComponentContent={RIGHT_CONTENT} />
       </div>
-    </>
+    </Layout>
   );
 };
 

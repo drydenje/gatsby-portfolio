@@ -4,7 +4,7 @@ import bgLeft from '../../images/backgroundLeft.png';
 import bgRight from '../../images/backgroundRight.png';
 
 export const HeaderStyles = styled.header`
-   max-height: 800px;
+   /* max-height: 800px; */
 
    label.menuBars {
       color: ${keppel};
@@ -24,13 +24,12 @@ export const HeaderStyles = styled.header`
       flex-direction: row;
       justify-content: center;
       align-items: center;
-      max-height: 800px;
+      /* max-height: 800px; */
    }
    
    div.panelLeft, div.panelRight {
       width: 50%;
       height: 100vh;
-      max-height: 800px;
       position: relative;
    }
    
