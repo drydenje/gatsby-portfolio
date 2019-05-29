@@ -13,6 +13,7 @@ module.exports = {
     portfolio: ['feedwatch', 'recipies', 'beachstays'],
   },
   plugins: [
+    `gatsby-plugin-styled-components`,
     `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-source-filesystem`,
@@ -55,4 +56,5 @@ module.exports = {
     'gatsby-transformer-remark',
     'gatsby-plugin-transition-link',
   ],
+  pathPrefix: '/gatsby-portfolio',
 };

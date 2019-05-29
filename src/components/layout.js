@@ -1,16 +1,23 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
+import styled from 'styled-components';
 import { useSpring } from 'react-spring';
 import Navigation from '../containers/Navigation';
-import styled from 'styled-components';
 
 // Setup and Base styling
 import SetupStyles from './setup.styles';
 import BaseStyles from './base.styles';
 
+// Font awesome icons
+import { library } from '@fortawesome/fontawesome-svg-core';
+import { fab, faTwitter } from '@fortawesome/free-brands-svg-icons';
+import { fas, faBars } from '@fortawesome/free-solid-svg-icons';
+
+// Add FontAwesome icons to the library, so they can be referenced throughout the app
+library.add(fab, faTwitter, fas, faBars);
+
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { GreenVivid, below } from '../utilities';
-// import { transparentize } from 'polished';
 
 const Layout = ({ children }) => {
   const [isNavOpen, setNavOpen] = useState(false);

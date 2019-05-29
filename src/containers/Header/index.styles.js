@@ -1,7 +1,7 @@
 import styled from 'styled-components';
-import { above, white, swamp, fuelYellow, keppel } from '../../utilities/';
 import bgLeft from '../../images/backgroundLeft.png';
 import bgRight from '../../images/backgroundRight.png';
+import { above, white, swamp, fuelYellow, keppel } from '../../utilities/';
 
 export const HeaderStyles = styled.header`
   width: 100%;

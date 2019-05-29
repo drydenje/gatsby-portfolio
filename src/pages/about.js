@@ -131,7 +131,7 @@ const AboutPage = () => {
         <html lang="en" />
         <meta charSet="utf-8" />
         <title>it's me, Jeremy D - About</title>
-        <link rel="canonical" href="http://www.itsmejeremyd.com" />
+        <link rel="canonical" href="https://www.itsmejeremyd.com" />
       </Helmet>
       <Panel ComponentContent={LEFT_CONTENT} />
       <Panel ComponentContent={RIGHT_CONTENT} />

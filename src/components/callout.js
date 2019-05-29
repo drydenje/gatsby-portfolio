@@ -16,7 +16,7 @@ const Callout = ({ headingText, headshot }) => {
     <StyledSquare
       onLoad={() => {
         setToggle(!isToggled);
-        console.log('loaded');
+        // console.log('loaded');
       }}
     >
       {headingText && (
