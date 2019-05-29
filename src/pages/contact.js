@@ -4,9 +4,8 @@ import styled from 'styled-components';
 // import Link from 'gatsby-plugin-transition-link';
 import { Helmet } from 'react-helmet';
 
-import Layout from '../components/layout';
 import Panel from '../containers/Panel';
-import Portfolio from '../containers/Portfolio';
+import Layout from '../components/layout';
 
 // utilities
 import {
@@ -16,12 +15,13 @@ import {
   fontWeightLight,
   fontWeightBold,
   white,
+  above,
 } from '../utilities';
 
 // images
 import BackgroundLeft from '../images/backgroundLeft.png';
 import BackgroundRight from '../images/backgroundRight.png';
-import Briefcase from '../images/noun_portfolio_bag_2393950.svg';
+import Envelope from '../images/noun_envelope_435258.svg';
 
 // title: {
 //   quote: 'A web developer',
@@ -32,7 +32,8 @@ import Briefcase from '../images/noun_portfolio_bag_2393950.svg';
 const Content = ({ className }) => {
   return (
     <div className={className}>
-      <Portfolio />
+      <h2>Want to talk?</h2>
+      <p>I can be reached at hello[at]itsmejeremyd.com</p>
     </div>
   );
 };
@@ -40,7 +41,7 @@ const Content = ({ className }) => {
 const StyledContent = styled(Content)`
   grid-column: 1 / 3;
   grid-row: 2 / 3;
-  padding: 0rem;
+  padding: 2rem;
 
   display: flex;
   flex-direction: column;
@@ -77,7 +78,10 @@ const StyledContent = styled(Content)`
     li {
       padding-left: 0.5rem;
       color: ${Grey['900']};
-      /* min-width: 40vw; */
+      min-width: 40vw;
+      ${above.tabletPortrait`
+        min-width: auto;
+      `}
     }
 
     li:before {
@@ -89,10 +93,9 @@ const StyledContent = styled(Content)`
 
 const LEFT_CONTENT = {
   BackgroundImage: BackgroundLeft,
-  CalloutText: 'Portfolio',
   Colour: YellowVivid['500'],
-  // Headshot: Headshot,
-  IconSrc: Briefcase,
+  CalloutText: 'Contact',
+  IconSrc: Envelope,
 };
 
 const RIGHT_CONTENT = {
@@ -107,14 +110,11 @@ const AboutPage = () => {
       <Helmet>
         <html lang="en" />
         <meta charSet="utf-8" />
-        <title>it's me, Jeremy D - Portfolio</title>
+        <title>it's me, Jeremy D - Contact</title>
         <link rel="canonical" href="http://www.itsmejeremyd.com" />
       </Helmet>
-
-      {/* <div style={{ display: 'flex' }}> */}
       <Panel ComponentContent={LEFT_CONTENT} />
       <Panel ComponentContent={RIGHT_CONTENT} />
-      {/* </div> */}
     </Layout>
   );
 };

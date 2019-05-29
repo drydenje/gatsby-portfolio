@@ -9,13 +9,13 @@ export const Hr = styled.hr`
   border-top: thin solid ${props => props.lineColour};
   text-align: center;
   width: ${props => props.lineWidth};
-  margin: 2rem auto 0rem auto;
+  margin: 4rem auto 2rem auto;
 
   :after {
     content: '◆';
     display: inline-block;
     position: relative;
-    top: -0.56em;
+    top: -0.59em;
     font-size: 1.5rem;
     padding: 0;
     background: transparent;

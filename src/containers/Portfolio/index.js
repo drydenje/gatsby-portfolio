@@ -2,7 +2,12 @@ import React from 'react';
 import Callout from '../../components/callout';
 import { Hr } from '../../elements';
 import Project from '../../components/project';
-// Todo: Font awesome icons, are they needed anymore after the redesign?
+
+import { GreenVivid, YellowVivid } from '../../utilities';
+
+import FeedwatchThumbnail from '../../images/projects/feedwatch.png';
+import CodeSnippetsThumbnail from '../../images/projects/codeSnippets.png';
+import BeachstayThumbnail from '../../images/projects/beachstay.png';
 
 const Portfolio = () => {
   return (
@@ -18,7 +23,7 @@ const Portfolio = () => {
             name: 'Project 5 - React Single Page App',
             urlGithub: 'https://github.com/drydenje/jeremy-dryden-project-5',
             urlLive: 'https://project-05-3b237.firebaseapp.com/',
-            thumbnailName: './images/feedwatch.png',
+            thumbnailName: FeedwatchThumbnail,
             thumbnailAltText: 'Project 5: Feedwatch.',
             keywords: ['React', 'Firebase', 'API', 'Git'],
             description:
@@ -28,33 +33,41 @@ const Portfolio = () => {
           }}
         />
 
-        <Hr />
+        <Hr
+          lineColour={GreenVivid['900']}
+          lineWidth="75%"
+          diamondColour={YellowVivid['500']}
+        />
 
         {/* Recipe Collections Project */}
         <Project
           details={{
             name: 'Project 3 - Code Recipes - jQuery Application',
             urlGithub: 'https://github.com/drydenje/jeremy-dryden-project-3',
-            urlLive: './sites/recipes/',
-            thumbnailName: './images/codeSnippets.png',
+            urlLive: 'https://drydenje.github.io/jeremy-dryden-project-3/',
+            thumbnailName: CodeSnippetsThumbnail,
             thumbnailAltText: 'Project 3 - Recipe Collector',
             keywords: ['jQuery', 'Namespacing'],
             description:
-              "A simple interactive recipe app that lets a user enter and save snippets of css code. You can navigate through currently entered snippets, add new ones, or delete others. As an added bonus try highlighting a css property, then click the question mark! A handy tool for programmers who don't know how to use browswer bookmarks.",
+              "A simple interactive recipe app that lets a user enter and save snippets of css code. You can navigate through currently entered snippets, add new ones, or delete others. As an added bonus try highlighting a css property, then click the question mark! A handy tool for programmers who don't know how to use browser bookmarks.",
             thisProject: 'project2',
             nextProject: 'project3',
           }}
         />
 
-        <Hr />
+        <Hr
+          lineColour={GreenVivid['900']}
+          lineWidth="75%"
+          diamondColour={YellowVivid['500']}
+        />
 
         {/* Beachstays Project */}
         <Project
           details={{
             name: 'Project 2 - Beachstays - PSD Conversion',
             urlGithub: 'https://github.com/drydenje/jeremy-dryden-project2',
-            urlLive: './sites/beachstays/',
-            thumbnailName: './images/beachstay.png',
+            urlLive: 'https://drydenje.github.io/jeremy-dryden-project2/',
+            thumbnailName: BeachstayThumbnail,
             thumbnailAltText: 'Psd to Html Conversion',
             keywords: [
               'Html5',

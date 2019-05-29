@@ -8,10 +8,10 @@ import { NavStyles } from './index.styles';
 const Navigation = ({ style }) => {
   return (
     <animated.div className="navWrapper" style={style}>
-      {/* <h3 className="navLogo">
-        itsMe<span>JeremyD</span>
-      </h3> */}
       <NavStyles>
+        <h3 className="navLogo">
+          itsMe<span>JeremyD</span>
+        </h3>
         <ul className="navLinks">
           <li>
             <Link to="/">Home</Link>

@@ -2,15 +2,17 @@
 import { css } from 'styled-components';
 
 // /* Media query function usage */
-// ${above.medium`
+// ${above.tabletPortrait`
 //   color: blue
 // `}
 
 // Set media query sizes
 const size = {
-  small: 400,
-  medium: 960,
-  large: 1140,
+  phone: 600,
+  tabletPortrait: 900,
+  tabletLandscape: 1200,
+  desktop: 1800,
+  desktopLarge: 1800, // over this amount
 };
 
 // Used for mobile first

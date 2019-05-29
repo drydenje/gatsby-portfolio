@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { white, swamp, fuelYellow, keppel } from '../../utilities';
+import { white, swamp, fuelYellow, keppel, fontSerif } from '../../utilities';
 
 export const NavStyles = styled.nav`
   display: flex;
@@ -37,7 +37,8 @@ export const NavStyles = styled.nav`
     }
   }
 
-  /* .navLogo {
+  .navLogo {
+    font-family: ${fontSerif};
     color: ${keppel};
 
     span:nth-child(1) {
@@ -46,7 +47,7 @@ export const NavStyles = styled.nav`
     span:nth-child(2) {
       color: ${white};
     }
-  } */
+  }
 
   .navLinks {
     text-align: right;

@@ -4,7 +4,7 @@ import styled from 'styled-components';
 import Callout from '../../components/callout';
 
 // utilities and colours
-import { absolute } from '../../utilities';
+import { absolute, above, below } from '../../utilities';
 
 const Panel = ({ ComponentContent }) => {
   const {
@@ -34,23 +34,35 @@ const Panel = ({ ComponentContent }) => {
 };
 
 const StyledPanel = styled.div`
-  height: 100vh;
-  width: 50%;
-  position: relative;
-  z-index: -1;
+  min-height: 140px;
+  ${above.tabletPortrait`
+    height: 100vh;
+  `}
 
-  display: grid;
-  grid-template-columns: 4fr 3fr 1fr;
-  grid-template-rows: 0.5fr 3fr 0.5fr;
-  grid-template-areas:
-    '. . .'
-    '. sectionTitle .'
-    '. . .';
+  width: 100%;
+  ${above.tabletPortrait`
+    width: 50%;
+  `}
+
+  position: relative;
+  z-index: 0;
+
+  ${above.tabletPortrait`
+    display: grid;
+    grid-template-columns: 4fr 4fr 1fr;
+    grid-template-rows: 0.5fr 3fr 0.5fr;
+    grid-template-areas:
+      '. . .'
+      '. sectionTitle .'
+      '. . .';
+  `}
 
   background-color: ${props => props.Colour};
   background-position-y: center;
   background-position-x: center;
   background-repeat: no-repeat;
+  overflow-y: auto;
+  overflow-x: hidden;
 
   :before {
     content: ' ';
@@ -60,7 +72,7 @@ const StyledPanel = styled.div`
     top: 0;
     width: 100%;
     height: 100%;
-    z-index: 0;
+    z-index: -1;
     opacity: 0.071;
     background-image: url(${props => props.BackgroundImage});
     background-repeat: no-repeat;
@@ -74,6 +86,9 @@ const StyledPanel = styled.div`
 `;
 
 const BottomRightIcon = styled.img`
+  ${below.tabletPortrait`
+    display: none;
+  `}
   ${absolute({ xProp: 'right', yProp: 'bottom' })};
   min-width: 100px;
   width: 15%;

@@ -2,9 +2,9 @@ import React from 'react';
 import styled from 'styled-components';
 // import TransitionLink from 'gatsby-plugin-transition-link';
 // import Link from 'gatsby-plugin-transition-link';
+import { Helmet } from 'react-helmet';
 
 import Panel from '../containers/Panel';
-import { Hr } from '../elements/Hr';
 import Layout from '../components/layout';
 
 // utilities
@@ -15,6 +15,7 @@ import {
   fontWeightLight,
   fontWeightBold,
   white,
+  above,
 } from '../utilities';
 
 // images
@@ -37,19 +38,11 @@ const Content = ({ className }) => {
       </h3>
       <p>
         I'm a Toronto, Ontario based front-end web developer looking for a good
-        fit with a great company. Feel free to reach out using the form below,
+        fit with a great company. Feel free to reach out using the contact page,
         I'd love to talk!
       </p>
 
-      {/* <p>I'm a recent HackerYou bootcamp graduate,</p> */}
-
-      <Hr
-        lineColour={GreenVivid['900']}
-        lineWidth="75%"
-        diamondColour={YellowVivid['500']}
-      />
-
-      {/* <h4>Technical Skills</h4>
+      <h4>Technical Skills</h4>
       <ul className="aboutSkills">
         <li>Html5</li>
         <li>Css3</li>
@@ -58,7 +51,9 @@ const Content = ({ className }) => {
         <li>jQuery</li>
         <li>React</li>
         <li>Firebase</li>
-      </ul> */}
+        <li>Gatsby</li>
+        <li>Styled Components</li>
+      </ul>
     </div>
   );
 };
@@ -104,6 +99,9 @@ const StyledContent = styled(Content)`
       padding-left: 0.5rem;
       color: ${Grey['900']};
       min-width: 40vw;
+      ${above.tabletPortrait`
+        min-width: auto;
+      `}
     }
 
     li:before {
@@ -115,10 +113,9 @@ const StyledContent = styled(Content)`
 
 const LEFT_CONTENT = {
   BackgroundImage: BackgroundLeft,
-  // CalloutText: 'Portfolio',
   Colour: YellowVivid['500'],
   Headshot: Headshot,
-  IconSrc: Briefcase,
+  CalloutText: '',
 };
 
 const RIGHT_CONTENT = {
@@ -130,10 +127,14 @@ const RIGHT_CONTENT = {
 const AboutPage = () => {
   return (
     <Layout>
-      <div style={{ display: 'flex' }}>
-        <Panel ComponentContent={LEFT_CONTENT} />
-        <Panel ComponentContent={RIGHT_CONTENT} />
-      </div>
+      <Helmet>
+        <html lang="en" />
+        <meta charSet="utf-8" />
+        <title>it's me, Jeremy D - About</title>
+        <link rel="canonical" href="http://www.itsmejeremyd.com" />
+      </Helmet>
+      <Panel ComponentContent={LEFT_CONTENT} />
+      <Panel ComponentContent={RIGHT_CONTENT} />
     </Layout>
   );
 };

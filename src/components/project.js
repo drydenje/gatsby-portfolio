@@ -1,5 +1,6 @@
 import React from 'react';
-// import styled from 'styled-components';
+import styled from 'styled-components';
+import { YellowVivid, Grey } from '../utilities';
 
 const Project = ({ details }) => {
   return (
@@ -23,30 +24,52 @@ const Project = ({ details }) => {
           })}
         </ul>
         <p>{details.description}</p>
-        <div className="middle">
-          <a
+        <FlexCenter>
+          <BigButton
             href={details.urlLive}
             className="square"
             target="_blank"
             rel="noopener noreferrer"
           >
             Live
-          </a>
+          </BigButton>
           <a href={details.nextProject} aria-label="Scroll to next project">
             <i className="fas fa-angle-double-down" />
           </a>
-          <a
+          <BigButton
             href={details.urlGithub}
             className="square"
             target="_blank"
             rel="noopener noreferrer"
           >
             GitHub
-          </a>
-        </div>
+          </BigButton>
+        </FlexCenter>
       </div>
     </div>
   );
 };
+
+const BigButton = styled.a`
+  display: inline-block;
+  color: ${Grey[900]};
+  width: 40%;
+  text-decoration: none;
+  background: transparent;
+  border: 0.1rem solid ${Grey[900]};
+  padding: 0.3rem;
+  text-align: center;
+
+  &:hover,
+  &:focus {
+    background-color: ${YellowVivid[500]};
+  }
+`;
+
+const FlexCenter = styled.div`
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+`;
 
 export default Project;
