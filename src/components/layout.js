@@ -1,54 +1,58 @@
-/**
- * Layout component that queries for data
- * with Gatsby's StaticQuery component
- *
- * See: https://www.gatsbyjs.org/docs/static-query/
- */
-
-import React from 'react';
+import React, { useState } from 'react';
 import PropTypes from 'prop-types';
-import { StaticQuery, graphql } from 'gatsby';
+import { useSpring } from 'react-spring';
+import Navigation from '../containers/Navigation';
+import styled from 'styled-components';
 
-import Header from './header';
-// import "./layout.css"
+// Setup and Base styling
 import SetupStyles from './setup.styles';
 import BaseStyles from './base.styles';
 
-const Layout = ({ children }) => (
-  <StaticQuery
-    query={graphql`
-      query SiteTitleQuery {
-        site {
-          siteMetadata {
-            title
-          }
-        }
-      }
-    `}
-    render={data => (
-      <>
-        <SetupStyles />
-        <BaseStyles />
-        <Header siteTitle={data.site.siteMetadata.title} />
-        <div
-          style={{
-            margin: `0 auto`,
-            maxWidth: 960,
-            padding: `0px 1.0875rem 1.45rem`,
-            paddingTop: 0,
-          }}
-        >
-          <main>{children}</main>
-          <footer>
-            © {new Date().getFullYear()}, Built with
-            {` `}
-            <a href="https://www.gatsbyjs.org">Gatsby</a>
-          </footer>
-        </div>
-      </>
-    )}
-  />
-);
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { GreenVivid, below } from '../utilities';
+// import { transparentize } from 'polished';
+
+const Layout = ({ children }) => {
+  const [isNavOpen, setNavOpen] = useState(false);
+  const navAnimation = useSpring({
+    transform: isNavOpen ? `translate3d(0,0,0)` : `translate3d(100%,0, 0)`,
+  });
+
+  return (
+    <>
+      <SetupStyles />
+      <BaseStyles />
+
+      <button
+        aria-label="Navigation Menu"
+        className="navButton"
+        onClick={() => setNavOpen(!isNavOpen)}
+        style={{
+          color: `${GreenVivid['500']}`,
+          // mixBlendMode: 'difference',
+          border: '0',
+          background: 'transparent',
+          fontSize: '1.3rem',
+          marginRight: '0.9rem',
+        }}
+      >
+        <FontAwesomeIcon icon={['fas', 'bars']} />
+      </button>
+      <Navigation style={navAnimation} />
+
+      <Main id="maincontent">{children}</Main>
+    </>
+  );
+};
+
+const Main = styled.main`
+  display: flex;
+  flex-direction: row;
+
+  ${below.tabletPortrait`
+    flex-direction: column;
+  `}
+`;
 
 Layout.propTypes = {
   children: PropTypes.node.isRequired,

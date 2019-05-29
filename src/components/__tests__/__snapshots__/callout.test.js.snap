@@ -1,0 +1,36 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Component - Callout renders a picture to the Callout component 1`] = `
+<div>
+  <div
+    class="sc-bdVaJa bBuFaz"
+  >
+    <img
+      class="sc-htpNat qHGID"
+      src="test-file-stub"
+    />
+  </div>
+</div>
+`;
+
+exports[`Component - Callout renders a section title to the Callout component 1`] = `
+<div>
+  <div
+    class="sc-bdVaJa bBuFaz"
+  >
+    <h1
+      class="sc-bwzfXH fSkwLX"
+    >
+      Portfolio
+    </h1>
+  </div>
+</div>
+`;
+
+exports[`Component - Callout renders correctly with no props passed 1`] = `
+<div>
+  <div
+    class="sc-bdVaJa bBuFaz"
+  />
+</div>
+`;

@@ -9,7 +9,7 @@ export const keraGrey = '#f7f5f5';
 // import {YellowVivid} from '/utilities'
 // usage: ${YellowVivid[500]}
 
-// Primary: YellowVivid, LightBlueVivid
+// Primary: YellowVivid[500], LightBlueVivid
 // Supporting: RedVivid, GreenVivid
 // Greys (Neutrals) for Palette 13
 
@@ -18,7 +18,7 @@ export const YellowVivid = {
   '800': 'hsl(22, 82%, 39%)',
   '700': 'hsl(29, 80%, 44%)',
   '600': 'hsl(36, 77%, 49%)',
-  '500': 'hsl(42, 87%, 55%)',
+  '500': 'hsl(41, 86%, 51%)',
   '400': 'hsl(44, 92%, 63%)',
   '300': 'hsl(48, 94%, 68%)',
   '200': 'hsl(48, 95%, 76%)',
