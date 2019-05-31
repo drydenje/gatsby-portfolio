@@ -1,33 +1,33 @@
 import styled from 'styled-components';
-import Background from '../../images/backgroundLeft.png';
-import { above, YellowVivid, Grey } from '../../utilities';
+import Background from '../../images/backgroundRight.png';
+import { above } from '../../utilities/';
 
-export const HeaderStyles = styled.header`
+export const PanelStyles = styled.article`
   width: 100%;
   height: 100vh;
   position: relative;
-  display: none;
   z-index: 0;
 
   ${above.tabletPortrait`
     width: 50%;
-
-    display: grid;
-    grid-template-columns: 4fr 4fr 1fr;
-    grid-template-rows: 0.5fr 3fr 0.5fr;
-    grid-template-areas:
-      '. . .'
-      '. sectionTitle .'
-      '. . .';
   `}
 
-  color: ${Grey['000']};
-  background-color: ${YellowVivid['500']};
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+
+  background-color: ${props => props.colour};
   background-position-y: center;
   background-position-x: center;
+  background-blend-mode: overlay;
   background-repeat: no-repeat;
+  background-attachment: fixed;
+
+  overflow-y: scroll;
 
   :before {
+    background-attachment: fixed;
     content: '';
     display: block;
     position: absolute;
