@@ -13,6 +13,7 @@ const IndexPage = () => (
       <link rel="canonical" href="https://www.itsmejeremyd.com" />
       <meta name="description" content="The portfolio page of Jeremy Dryden" />
     </Helmet>
+
     <Header />
   </Layout>
 );

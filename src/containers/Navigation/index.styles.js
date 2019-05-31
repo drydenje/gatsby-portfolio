@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { white, swamp, fuelYellow, keppel, fontSerif } from '../../utilities';
+import { white, swamp, fuelYellow } from '../../utilities';
 
 export const NavStyles = styled.nav`
   display: flex;
@@ -37,18 +37,6 @@ export const NavStyles = styled.nav`
     }
   }
 
-  .navLogo {
-    font-family: ${fontSerif};
-    color: ${keppel};
-
-    span:nth-child(1) {
-      color: ${fuelYellow};
-    }
-    span:nth-child(2) {
-      color: ${white};
-    }
-  }
-
   .navLinks {
     text-align: right;
     li {
@@ -64,10 +52,4 @@ export const NavStyles = styled.nav`
       }
     }
   }
-
-  /* .navSocialLinks {
-    li {
-      display: inline-block;
-    }
-  } */
 `;

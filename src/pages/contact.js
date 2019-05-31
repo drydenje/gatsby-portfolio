@@ -20,7 +20,7 @@ import {
 
 // images
 import BackgroundLeft from '../images/backgroundLeft.png';
-import BackgroundRight from '../images/backgroundRight.png';
+// import BackgroundRight from '../images/backgroundRight.png';
 import Envelope from '../images/noun_envelope_435258.svg';
 
 // title: {

@@ -13,11 +13,11 @@ import { library } from '@fortawesome/fontawesome-svg-core';
 import { fab, faTwitter } from '@fortawesome/free-brands-svg-icons';
 import { fas, faBars } from '@fortawesome/free-solid-svg-icons';
 
-// Add FontAwesome icons to the library, so they can be referenced throughout the app
-library.add(fab, faTwitter, fas, faBars);
-
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { GreenVivid, below } from '../utilities';
+
+// Add FontAwesome icons to the library, so they can be referenced throughout the app
+library.add(fab, faTwitter, fas, faBars);
 
 const Layout = ({ children }) => {
   const [isNavOpen, setNavOpen] = useState(false);

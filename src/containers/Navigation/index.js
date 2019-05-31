@@ -1,4 +1,5 @@
 import React from 'react';
+import Logo from '../../components/logo';
 import { animated } from 'react-spring';
 
 import { Link } from 'gatsby';
@@ -9,9 +10,7 @@ const Navigation = ({ style }) => {
   return (
     <animated.div className="navWrapper" style={style}>
       <NavStyles>
-        <h3 className="navLogo">
-          itsMe<span>JeremyD</span>
-        </h3>
+        <Logo fontSize="1.5rem" />
         <ul className="navLinks">
           <li>
             <Link to="/">Home</Link>

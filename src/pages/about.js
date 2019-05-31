@@ -21,7 +21,7 @@ import {
 // images
 import BackgroundLeft from '../images/backgroundLeft.png';
 import BackgroundRight from '../images/backgroundRight.png';
-import Briefcase from '../images/noun_portfolio_bag_2393950.svg';
+// import Briefcase from '../images/noun_portfolio_bag_2393950.svg';
 import Headshot from '../images/Square.jpg';
 
 // title: {

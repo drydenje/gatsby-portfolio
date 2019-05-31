@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import bgLeft from '../../images/backgroundLeft.png';
 import bgRight from '../../images/backgroundRight.png';
-import { above, white, swamp, fuelYellow, keppel } from '../../utilities/';
+import { above, white, swamp, fuelYellow } from '../../utilities/';
 
 export const HeaderStyles = styled.header`
   width: 100%;
@@ -82,20 +82,6 @@ export const HeaderStyles = styled.header`
     -moz-background-size: cover;
     -webkit-background-size: cover;
     background-size: cover;
-  }
-
-  h1 {
-    span.its {
-      color: ${fuelYellow};
-    }
-
-    span.me {
-      color: ${keppel};
-    }
-
-    span.jeremyd {
-      color: ${white};
-    }
   }
 
   input[type='checkbox'] {

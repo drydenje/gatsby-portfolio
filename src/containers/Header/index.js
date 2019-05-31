@@ -1,5 +1,6 @@
 import React from 'react';
 import { HeaderStyles } from './index.styles';
+import Logo from '../../components/logo';
 
 const Header = () => {
   return (
@@ -7,11 +8,7 @@ const Header = () => {
       <div className="container">
         <div className="panelLeft" />
         <div className="panelRight">
-          <h1>
-            <span className="its">it's</span>
-            <span className="me">me</span>
-            <span className="jeremyd">jeremyd</span>
-          </h1>
+          <Logo fontSize="2.5rem" />
         </div>
       </div>
     </HeaderStyles>
