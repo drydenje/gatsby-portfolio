@@ -39,7 +39,7 @@ h2 {
 h3 {
   font-family: ${fontSerif};
   font-weight: ${fontWeightLight};
-  margin: 0.2rem auto;
+  /* margin: 0.2rem auto; */
 }
 
 h4 {

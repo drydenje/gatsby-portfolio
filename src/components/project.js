@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { YellowVivid, Grey } from '../utilities';
+import { BigButton, DiamondList } from '../elements';
 
 const Project = ({ details }) => {
   return (
@@ -18,11 +18,11 @@ const Project = ({ details }) => {
       </a>
       <div className="writeUp">
         <h2>{details.name}</h2>
-        <ul>
+        <DiamondList>
           {details.keywords.map(word => {
             return <li key={word}>{word}</li>;
           })}
-        </ul>
+        </DiamondList>
         <p>{details.description}</p>
         <FlexCenter>
           <BigButton
@@ -49,22 +49,6 @@ const Project = ({ details }) => {
     </div>
   );
 };
-
-const BigButton = styled.a`
-  display: inline-block;
-  color: ${Grey[900]};
-  width: 40%;
-  text-decoration: none;
-  background: transparent;
-  border: 0.1rem solid ${Grey[900]};
-  padding: 0.3rem;
-  text-align: center;
-
-  &:hover,
-  &:focus {
-    background-color: ${YellowVivid[500]};
-  }
-`;
 
 const FlexCenter = styled.div`
   display: flex;

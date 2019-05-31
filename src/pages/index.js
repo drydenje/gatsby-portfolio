@@ -1,8 +1,16 @@
 import React from 'react';
 import { Helmet } from 'react-helmet';
+
+// Website Containers
 import Layout from '../components/layout';
-//Website Containers
 import Header from '../containers/Header';
+import Panel from '../containers/Panel';
+
+// Components
+import Logo from '../components/logo';
+
+// Utilities
+import { Grey } from '../utilities/';
 
 const IndexPage = () => (
   <Layout>
@@ -15,6 +23,7 @@ const IndexPage = () => (
     </Helmet>
 
     <Header />
+    <Panel colour={Grey['900']} content={<Logo fontSize="2rem" />} />
   </Layout>
 );
 
