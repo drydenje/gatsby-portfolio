@@ -95,7 +95,7 @@ label.visuallyHidden:not(:focus):not(:active) {
   position: absolute;
   top: 0;
   right: 0;
-  z-index: 20;
+  z-index: 5;
   margin: 10px;
 }
 

@@ -12,10 +12,10 @@ export const PanelStyles = styled.article`
     width: 50%;
   `}
 
-  display: flex;
+  /* display: flex;
   flex-direction: row;
   justify-content: center;
-  align-items: center;
+  align-items: center; */
 
   background-color: ${props => props.colour};
   background-position-y: center;

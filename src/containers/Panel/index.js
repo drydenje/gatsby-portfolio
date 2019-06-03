@@ -1,4 +1,3 @@
-// important imports
 import React from 'react';
 import { PanelStyles } from './index.styles';
 

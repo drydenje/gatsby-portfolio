@@ -18,7 +18,7 @@ describe('Component - Callout', () => {
     const { container, debug } = render(<Callout headingText="Portfolio" />);
     expect(container).toMatchSnapshot();
     expect(container).toHaveTextContent('Portfolio');
-    console.log(debug);
+    // console.log(debug);
   });
 
   it('renders a picture to the Callout component', () => {

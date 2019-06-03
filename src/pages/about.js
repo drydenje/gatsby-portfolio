@@ -1,5 +1,6 @@
 import React from 'react';
 import { Helmet } from 'react-helmet';
+import { graphql } from 'gatsby';
 
 // Website Containers
 import Layout from '../components/layout';
@@ -16,7 +17,18 @@ import { Grey } from '../utilities';
 // Images
 import Headshot from '../images/Square.jpg';
 
-const AboutPage = () => (
+export const query = graphql`
+  {
+    site {
+      siteMetadata {
+        title
+        description
+      }
+    }
+  }
+`;
+
+const AboutPage = ({ data }) => (
   <Layout>
     <Helmet>
       <html lang="en" />

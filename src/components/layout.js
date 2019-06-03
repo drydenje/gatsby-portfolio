@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
-import { useSpring } from 'react-spring';
 import Navigation from '../containers/Navigation';
 
 // Setup and Base styling
@@ -11,19 +10,16 @@ import BaseStyles from './base.styles';
 // Font awesome icons
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { fab, faTwitter } from '@fortawesome/free-brands-svg-icons';
-import { fas, faBars } from '@fortawesome/free-solid-svg-icons';
-
+import { fas, faBars, faTimesCircle } from '@fortawesome/free-solid-svg-icons';
+// faTimes, faTimesCircle
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { GreenVivid, below } from '../utilities';
 
 // Add FontAwesome icons to the library, so they can be referenced throughout the app
-library.add(fab, faTwitter, fas, faBars);
+library.add(fab, faTwitter, fas, faBars, faTimesCircle);
 
 const Layout = ({ children }) => {
   const [isNavOpen, setNavOpen] = useState(false);
-  const navAnimation = useSpring({
-    transform: isNavOpen ? `translate3d(0,0,0)` : `translate3d(100%,0, 0)`,
-  });
 
   return (
     <>
@@ -45,7 +41,7 @@ const Layout = ({ children }) => {
       >
         <FontAwesomeIcon icon={['fas', 'bars']} />
       </button>
-      <Navigation style={navAnimation} />
+      <Navigation navToggle={isNavOpen} setNavOpen={setNavOpen} />
 
       <Main id="maincontent">{children}</Main>
     </>
