@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: `its me jeremy d`,
+    title: `it's me, Jeremy D`,
     description: `The portfolio site of Jeremy Dryden, a Toronto-based front end web developer`,
     author: `@itsmejeremyd`,
     keywords: [
@@ -55,6 +55,7 @@ module.exports = {
     `gatsby-plugin-offline`,
     'gatsby-transformer-remark',
     'gatsby-plugin-transition-link',
+    `gatsby-image`,
   ],
   pathPrefix: '/gatsby-portfolio',
 };

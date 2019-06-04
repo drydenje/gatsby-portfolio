@@ -1,17 +1,20 @@
 import React from 'react';
 import styled from 'styled-components';
+import Img from 'gatsby-image';
 import { absolute, elevation, above, below } from '../utilities';
 import CalloutSquare from '../images/CalloutSquare.svg';
 
 const Portrait = ({ headshot }) => {
   return (
     <StyledSquare>
-      <StyledHeadshot src={headshot} />
+      <StyledHeadshot
+        fixed={headshot.childImageSharp.fixed}
+        alt="A picture of Jeremy Dryden. Photo credit to @pamlau"
+      />
     </StyledSquare>
   );
 };
 
-// export default styled(Callout)``;
 export default Portrait;
 
 const StyledSquare = styled.div`
@@ -30,7 +33,7 @@ const StyledSquare = styled.div`
   min-width: 350px;
 `;
 
-const StyledHeadshot = styled.img`
+const StyledHeadshot = styled(Img)`
   /* ${absolute({ xProp: 'right', yProp: '50%' })}; */
   ${below.tabletPortrait`
     display: none;
