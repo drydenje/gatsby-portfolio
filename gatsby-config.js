@@ -57,5 +57,5 @@ module.exports = {
     'gatsby-plugin-transition-link',
     `gatsby-image`,
   ],
-  pathPrefix: '/gatsby-portfolio',
+  // pathPrefix: '/gatsby-portfolio',
 };
