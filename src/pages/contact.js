@@ -23,7 +23,7 @@ const AboutPage = () => {
         <html lang="en" />
         <meta charSet="utf-8" />
         <title>it's me, Jeremy D - Contact</title>
-        <link rel="canonical" href="https://www.itsmejeremyd.com" />
+        <link rel="canonical" href="https://www.itsmejeremyd.com/contact" />
         <meta name="description" content="How to contact Jeremy Dryden" />
       </Helmet>
 

@@ -23,7 +23,7 @@ const PortfolioPage = () => {
         <html lang="en" />
         <meta charSet="utf-8" />
         <title>it's me, Jeremy D - Portfolio</title>
-        <link rel="canonical" href="https://www.itsmejeremyd.com" />
+        <link rel="canonical" href="https://www.itsmejeremyd.com/portfolio" />
         <meta name="description" content="The portfolio of Jeremy Dryden" />
       </Helmet>
 

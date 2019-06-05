@@ -38,7 +38,7 @@ const AboutPage = ({ data }) => (
           <html lang="en" />
           <meta charSet="utf-8" />
           <title>{data.site.siteMetadata.title} - About</title>
-          <link rel="canonical" href="https://www.itsmejeremyd.com" />
+          <link rel="canonical" href="https://www.itsmejeremyd.com/about" />
           <meta name="description" content="A little bit about Jeremy Dryden" />
         </Helmet>
 
