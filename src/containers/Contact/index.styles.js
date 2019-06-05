@@ -7,8 +7,9 @@ import {
 } from '../../utilities';
 
 export const ContactStyles = styled.article`
-  grid-column: 1 / 3;
-  grid-row: 2 / 3;
+  /* grid-column: 1 / 3;
+  grid-row: 2 / 3; */
+  height: 100%;
   padding: 2rem;
 
   display: flex;
