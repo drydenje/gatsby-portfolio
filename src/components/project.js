@@ -1,8 +1,9 @@
 import React from 'react';
 import styled from 'styled-components';
+import Img from 'gatsby-image';
 import { BigButton, DiamondList } from '../elements';
 
-const Project = ({ details }) => {
+const Project = details => {
   return (
     <div className="project" id={details.currentProject}>
       <a
@@ -13,7 +14,12 @@ const Project = ({ details }) => {
         aria-label={details.thumbnailAltText}
       >
         <figure className="projectImage">
-          <img src={details.thumbnailName} alt={details.thumbnailAltText} />
+          {details.thumbnail && (
+            <Img
+              fluid={details.thumbnail.childImageSharp.fluid}
+              alt={details.thumbnailAltText}
+            />
+          )}
         </figure>
       </a>
       <div className="writeUp">
@@ -33,9 +39,9 @@ const Project = ({ details }) => {
           >
             Live
           </BigButton>
-          <a href={details.nextProject} aria-label="Scroll to next project">
+          {/* <a href={details.nextProject} aria-label="Scroll to next project">
             <i className="fas fa-angle-double-down" />
-          </a>
+          </a> */}
           <BigButton
             href={details.urlGithub}
             className="square"
