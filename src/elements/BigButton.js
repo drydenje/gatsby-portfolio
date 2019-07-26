@@ -1,7 +1,8 @@
 import styled from 'styled-components';
 import { Grey, YellowVivid } from '../utilities';
+import { OutboundLink } from 'gatsby-plugin-google-analytics';
 
-export const BigButton = styled.a`
+export const BigButton = styled(OutboundLink)`
   display: inline-block;
   color: ${Grey[900]};
   width: 40%;
