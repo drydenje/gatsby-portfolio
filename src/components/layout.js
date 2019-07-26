@@ -4,6 +4,8 @@ import styled from 'styled-components';
 import Navigation from '../containers/Navigation';
 
 // Setup and Base styling
+import 'typeface-merriweather';
+import 'typeface-lato';
 import SetupStyles from './setup.styles';
 import BaseStyles from './base.styles';
 

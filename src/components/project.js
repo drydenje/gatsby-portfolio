@@ -2,11 +2,12 @@ import React from 'react';
 import styled from 'styled-components';
 import Img from 'gatsby-image';
 import { BigButton, DiamondList } from '../elements';
+import { OutboundLink } from 'gatsby-plugin-google-analytics';
 
 const Project = details => {
   return (
     <div className="project" id={details.currentProject}>
-      <a
+      <OutboundLink
         href={details.urlLive}
         className="square"
         target="_blank"
@@ -21,7 +22,7 @@ const Project = details => {
             />
           )}
         </figure>
-      </a>
+      </OutboundLink>
       <div className="writeUp">
         <h2>{details.name}</h2>
         <DiamondList>

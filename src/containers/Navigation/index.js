@@ -20,6 +20,7 @@ const Navigation = ({ navToggle: isNavOpen, setNavOpen }) => {
 
   return (
     <animated.div className="navWrapper" style={navAnimation}>
+      {/* Updated */}
       <NavStyles ref={ref}>
         <Logo fontSize="1.5rem" />
         <button
