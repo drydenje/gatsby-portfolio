@@ -78,7 +78,7 @@ module.exports = {
         // Any additional create only fields (optional)
         sampleRate: 5,
         siteSpeedSampleRate: 10,
-        cookieDomain: 'https://www.itsmejeremyd.com',
+        cookieDomain: 'itsmejeremyd.com',
       },
     },
   ],
