@@ -11,6 +11,7 @@ module.exports = {
       'test driven development',
     ],
     portfolio: ['feedwatch', 'recipies', 'beachstays'],
+    siteUrl: 'https://www.itsmejeremyd.com',
   },
   plugins: [
     `gatsby-plugin-styled-components`,
