@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import { Grey, YellowVivid } from '../utilities';
-import { OutboundLink } from 'gatsby-plugin-google-analytics';
+import { OutboundLink } from 'gatsby-plugin-gtag';
 
 export const BigButton = styled(OutboundLink)`
   display: inline-block;

@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import Img from 'gatsby-image';
 import { BigButton, DiamondList } from '../elements';
-import { OutboundLink } from 'gatsby-plugin-google-analytics';
+import { OutboundLink } from 'gatsby-plugin-gtag';
 
 const Project = details => {
   return (
